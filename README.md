@@ -10,13 +10,13 @@ Este proyecto implementa un modelo de **clasificación multilabel** de artículo
 - Hepatorenal  
 - Oncological  
 
-El modelo se entrenó usando **TF-IDF** sobre "title + abstract" y un clasificador **One-vs-Rest con LinearSVC**.
+El modelo se entrenó usando **TF-IDF** sobre `title + abstract` y un clasificador **One-vs-Rest con LinearSVC**.
 
 ---
 
 ### Estructura del Proyecto
 
-- "model_svm.pkl" → modelo entrenado.  
+- `model_svm.pkl` → modelo entrenado.  
 - `tfidf_vectorizer.pkl` → vectorizador TF-IDF.  
 - `model.py` → script de entrenamiento y guardado del modelo.  
 - `predict.py` → script para realizar predicciones con nuevos artículos.  
@@ -35,28 +35,32 @@ El modelo se entrenó usando **TF-IDF** sobre "title + abstract" y un clasificad
 2. (Opcional) Crear un entorno virtual
 Esto es recomendable para no mezclar librerías con otros proyectos.
 
-  -En Windows:
-
+  2.1 En Windows:
+   ```bash
     python -m venv venv
     venv\Scripts\activate
+   ```
   
-  
-  -En Linux/Mac:
-  
+  2.2 En Linux/Mac:
+  ```bash
     python3 -m venv venv
     source venv/bin/activate
-
+  ```
 
 3. Instalar dependencias
-
+```bash
 pip install -r requirements.txt
-
+```
 4. Entrenar el modelo
+```bash
 python train.py
-'Esto genera los archivos model_svm.pkl y tfidf_vectorizer.pkl.'
+```
+Esto genera los archivos model_svm.pkl y tfidf_vectorizer.pkl.
 
-5. Hacer una predicción
+6. Hacer una predicción
+```bash
 python predict.py
-'El programa pedirá un título y un abstract, luego devolverá las etiquetas predichas.'
+```
+El programa pedirá un título y un abstract, luego devolverá las etiquetas predichas.
 
    
