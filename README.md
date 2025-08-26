@@ -35,13 +35,13 @@ El modelo se entrenó usando **TF-IDF** sobre `title + abstract` y un clasificad
 2. (Opcional) Crear un entorno virtual
 Esto es recomendable para no mezclar librerías con otros proyectos.
 
-  2.1 En Windows:
+      2.1 En Windows:
    ```bash
     python -m venv venv
     venv\Scripts\activate
    ```
   
-  2.2 En Linux/Mac:
+      2.2 En Linux/Mac:
   ```bash
     python3 -m venv venv
     source venv/bin/activate
